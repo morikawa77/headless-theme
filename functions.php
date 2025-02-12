@@ -101,10 +101,10 @@ function headless_theme_support()
 add_action('after_setup_theme', 'headless_theme_support');
 
 // Enfileirar scripts
-function meu_tema_scripts()
+function headless_theme_scripts()
 {
   if (is_singular() && comments_open() && get_option('thread_comments')) {
     wp_enqueue_script('comment-reply');
   }
 }
-add_action('wp_enqueue_scripts', 'meu_tema_scripts');
+add_action('wp_enqueue_scripts', 'headless_theme_scripts');
