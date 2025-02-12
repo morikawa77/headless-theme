@@ -1,1 +1,1 @@
-# Headless Theme - A blank theme with page redirect for your Wordpress Headless
+# Headless - A blank theme with page redirect for your Wordpress Headless

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Headless Theme functions and definitions.
+ * Headless - Theme functions and definitions.
  */
 
 // Adicionar menu de configurações ao painel admin
