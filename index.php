@@ -56,7 +56,7 @@ redirecionar(get_option('url_to_redirect'));
             <?php the_content(); ?>
             <?php 
                 wp_link_pages(array(
-                    'before' => '<div class="page-links">' . esc_html__('Pages:', 'meu-tema'),
+                    'before' => '<div class="page-links">' . esc_html__('Pages:', 'headless-by-wolfpartners'),
                     'after'  => '</div>',
                 ));
             ?>
