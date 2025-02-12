@@ -5,19 +5,19 @@
  */
 
 // Adicionar menu de configurações ao painel admin
-function tema_adicionar_menu_admin()
+function headless_theme_add_admin_menu()
 {
   add_menu_page(
-    'Configurações do Tema Headless', // Título da página
-    'Configurações do Tema Headless',        // Título do menu
-    'manage_options',        // Capacidade necessária
-    'configuracoes-tema',    // Slug do menu
-    'tema_pagina_config',    // Função que renderiza a página
-    'dashicons-admin-generic', // Ícone
-    60                        // Posição no menu
+    __('Configurações do Tema Headless', 'headless-by-wolfpartners'),
+    __('Configurações do Tema', 'headless-by-wolfpartners'),
+    'manage_options',
+    'configuracoes-tema',
+    'headless_theme_config_page',
+    'dashicons-admin-generic',
+    60
   );
 }
-add_action('admin_menu', 'tema_adicionar_menu_admin');
+add_action('admin_menu', 'headless_theme_add_admin_menu');
 
 // Registrar as configurações
 function tema_registrar_configuracoes()
@@ -30,15 +30,14 @@ function tema_registrar_configuracoes()
 add_action('admin_init', 'tema_registrar_configuracoes');
 
 // Renderizar a página de configurações
-function tema_pagina_config()
+function headless_theme_config_page()
 {
-  // Verificar permissões
   if (!current_user_can('manage_options')) {
     return;
   }
 ?>
   <div class="wrap">
-    <h1><?php echo esc_html(get_admin_page_title()); ?></h1>
+    <h1><?php esc_html_e('Configurações do Tema Headless', 'headless-by-wolfpartners'); ?></h1>
     <form action="options.php" method="post">
       <?php
       settings_fields('configuracoes-tema-grupo');
@@ -46,7 +45,7 @@ function tema_pagina_config()
       ?>
       <table class="form-table">
         <tr>
-          <th scope="row">Digite aqui a URL para o redirecionamento:</th>
+          <th scope="row"><?php esc_html_e('URL para redirecionamento:', 'headless-by-wolfpartners'); ?></th>
           <td>
             <input type="text"
               name="url_to_redirect"
@@ -55,7 +54,7 @@ function tema_pagina_config()
           </td>
         </tr>
       </table>
-      <?php submit_button('Salvar Configurações'); ?>
+      <?php submit_button(__('Salvar Configurações', 'headless-by-wolfpartners')); ?>
     </form>
   </div>
 <?php
