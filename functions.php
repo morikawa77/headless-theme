@@ -46,7 +46,7 @@ function tema_pagina_config()
       ?>
       <table class="form-table">
         <tr>
-          <th scope="row">Minha Configuração</th>
+          <th scope="row">Digite aqui a URL para o redirecionamento:</th>
           <td>
             <input type="text"
               name="url_to_redirect"
