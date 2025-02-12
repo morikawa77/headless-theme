@@ -1,15 +1,12 @@
 /*
 Theme Name: Headless by Wolf+Partners
-Theme URI: https://exemplo.com/meu-tema
+Theme URI: https://github.com/morikawa77/headless-theme
 Author: Wolf+Partners
-Author URI: https://exemplo.com
-Description: Um tema para usar com o seu WordPress Headless
+Author URI: https://wolfandpartners.com.br
+Description: Tema WordPress para integração headless
 Version: 1.0
-Tested up to: 6.5
-Requires PHP: 7.4
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: meu-tema
+Tags: headless
+Text Domain: headless-by-wolf-partners
 */
 
 .wp-caption {}
