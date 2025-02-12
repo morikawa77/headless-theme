@@ -5,8 +5,12 @@ Author: Wolf+Partners
 Author URI: https://wolfandpartners.com.br
 Description: Tema WordPress para integração headless
 Version: 1.0
+Tested up to: 6.7.2
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: headless
-Text Domain: headless-by-wolf-partners
+Text Domain: headless-by-wolfpartners
 */
 
 .wp-caption {}

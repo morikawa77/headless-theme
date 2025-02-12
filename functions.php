@@ -61,7 +61,7 @@ function tema_pagina_config()
 <?php
 }
 
-function meu_tema_setup()
+function headless_theme_support()
 {
   // Suporte básico
   add_theme_support('title-tag');
@@ -92,11 +92,13 @@ function meu_tema_setup()
 
   // Registrar menus
   register_nav_menus(array(
-    'primary' => __('Menu Principal', 'meu-tema'),
-    'footer'  => __('Menu Rodapé', 'meu-tema')
+    'primary' => __('Menu Principal', 'headless-by-wolfpartners'),
+    'footer'  => __('Menu Rodapé', 'headless-by-wolfpartners')
   ));
+
+  load_theme_textdomain('headless-by-wolfpartners', get_template_directory() . '/languages');
 }
-add_action('after_setup_theme', 'meu_tema_setup');
+add_action('after_setup_theme', 'headless_theme_support');
 
 // Enfileirar scripts
 function meu_tema_scripts()
