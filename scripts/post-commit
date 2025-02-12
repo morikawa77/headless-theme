@@ -1,3 +1,0 @@
-#!/bin/sh
-# Gera o arquivo ZIP excluindo arquivos desnecessários
-zip -r headless.zip . -x *.git* -x headless.zip -x .DS_Store -x node_modules/\* 

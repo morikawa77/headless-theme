@@ -47,3 +47,6 @@ watch_and_zip.ps1
 watch_and_zip.sh
 setup.ps1
 setup.sh
+
+# Adicione esta linha para ignorar a pasta scripts
+/scripts/
