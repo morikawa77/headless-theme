@@ -60,3 +60,49 @@ function tema_pagina_config()
   </div>
 <?php
 }
+
+function meu_tema_setup()
+{
+  // Suporte básico
+  add_theme_support('title-tag');
+  add_theme_support('automatic-feed-links');
+  add_theme_support('post-thumbnails');
+  add_theme_support('html5', array(
+    'comment-list',
+    'comment-form',
+    'search-form',
+    'gallery',
+    'caption',
+    'style',
+    'script'
+  ));
+
+  // Suporte para blocos
+  add_theme_support('wp-block-styles');
+  add_theme_support('align-wide');
+  add_theme_support('responsive-embeds');
+
+  // Customização
+  add_theme_support('custom-logo');
+  add_theme_support('custom-header');
+  add_theme_support('custom-background');
+
+  // Estilos do editor
+  add_editor_style('editor-style.css');
+
+  // Registrar menus
+  register_nav_menus(array(
+    'primary' => __('Menu Principal', 'meu-tema'),
+    'footer'  => __('Menu Rodapé', 'meu-tema')
+  ));
+}
+add_action('after_setup_theme', 'meu_tema_setup');
+
+// Enfileirar scripts
+function meu_tema_scripts()
+{
+  if (is_singular() && comments_open() && get_option('thread_comments')) {
+    wp_enqueue_script('comment-reply');
+  }
+}
+add_action('wp_enqueue_scripts', 'meu_tema_scripts');

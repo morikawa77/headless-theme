@@ -31,3 +31,19 @@ Temporary Items
 # iCloud generated files
 *.icloud
 
+### Theme zip ###
+*.zip
+
+# WordPress
+/node_modules/
+/vendor/
+*.log
+*.sql
+wp-config.php
+
+# Adicione no final do arquivo
+headless.zip
+watch_and_zip.ps1
+watch_and_zip.sh
+setup.ps1
+setup.sh
