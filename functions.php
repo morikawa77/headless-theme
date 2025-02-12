@@ -1,6 +1,12 @@
 <?php
 
 /**
+ * @package Headless_Theme
+ * @copyright Copyright (C) 2024 Wolf+Partners
+ * @license GNU GPL v2 or later
+ */
+
+/**
  * Headless - Theme functions and definitions.
  */
 
